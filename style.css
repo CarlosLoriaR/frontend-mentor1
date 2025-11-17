@@ -1,0 +1,101 @@
+:root {
+    --Green: #c5f82a;
+    --White: #ffffff;
+    --Grey-700: #333333;
+    --Grey-800: #1f1f1f;
+    --Grey-900: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+    background-color: var(--Grey-900);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Grey-800);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    gap: 1rem;
+
+    & img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    & h1 {
+        color: var(--White);
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    & h2 {
+        color: var(--Green);
+        font-size: 14px;
+    }
+
+    & p {
+        color: #c0c0c0;
+    }
+
+    & .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+
+        & a {
+            text-decoration: none;
+            color: var(--White);
+            background-color: var(--Grey-700);
+            width: 100%;
+            padding: 1rem 7rem;
+            border-radius: .5rem;
+            font-weight: bold;
+            transition: all .3s ease-in;
+
+            &:hover {
+                background-color: var(--Green);
+                color: var(--Grey-900);
+            }
+        }
+    }
+
+
+}
+
+/* MOBILE */
+@media screen and (max-width:375px) {
+
+    main {
+        padding: 1rem;
+    }
+
+    main .socials a {
+        padding: 1rem 6rem;
+    }
+}
